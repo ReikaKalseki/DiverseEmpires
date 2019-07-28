@@ -1,0 +1,289 @@
+cythra_system_initializer = {
+	name = "Cythra"
+	class = "sc_g"
+	usage = custom_empire
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Cythra"
+		class = "pc_g_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 27
+		has_ring = no
+	}
+
+	planet = {
+		name = "Tak"
+		class = "pc_molten"
+		orbit_distance = 42
+		orbit_angle = { min = 90 max = 270 }
+		size = 27
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Telo"
+		class = "pc_barren"
+		orbit_distance = 31
+		orbit_angle = { min = 90 max = 270 }
+		size = 17
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		moon = {
+			name = "En-Telo"
+			class = "pc_barren"
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = 8
+			tile_blockers = none
+			modifiers = none
+			init_effect = {
+				prevent_anomaly = yes
+			}
+		}
+	}
+	planet = {
+		name = "Savo"
+		class = "pc_arid"
+		orbit_distance = 53
+		orbit_angle = { min = 90 max = 270 }
+		size = 19
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+		}
+	}
+	planet = {
+		name = "Midor"
+		class = "pc_infested"
+		orbit_distance = 42
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		moon = {
+			name = "An-Midor"
+			class = "pc_asteroid"
+			orbit_distance = 7
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+		}
+		moon = {
+			name = "Em-Midor"
+			class = "pc_asteroid"
+			orbit_distance = 4
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+		}
+	}
+	planet = {
+		name = "Cynndor"
+		class = "pc_continental"
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
+		size = 23
+		has_ring = no
+		starting_planet = yes
+		tile_blockers = none
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		init_effect = {
+			generate_start_buildings_and_blockers = yes
+		}
+	}
+	planet = {
+		name = "Liva"
+		class = "pc_gas_giant"
+		orbit_distance = 57
+		orbit_angle = { min = 90 max = 270 }
+		size = 36
+		change_orbit = 8
+		has_ring = yes
+		change_orbit = 5
+		modifiers = none
+		moon = {
+			name = "Ep-Liva"
+			class = "pc_molten"
+			orbit_distance = 9
+			orbit_angle = { min = 90 max = 270 }
+			size = 11
+		}
+		moon = {
+			name = "Ma-Liva"
+			class = "pc_toxic"
+			orbit_distance = 9
+			orbit_angle = { min = 90 max = 270 }
+			size = 17
+		}
+		moon = {
+			name = "Te-Liva"
+			class = "pc_barren_cold"
+			orbit_distance = 6
+			orbit_angle = { min = 90 max = 270 }
+			size = 14
+		}
+		moon = {
+			name = "Af-Liva"
+			class = "pc_asteroid"
+			orbit_distance = 7
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+		}
+		moon = {
+			name = "Ru-Liva"
+			class = "pc_asteroid"
+			orbit_distance = 8
+			orbit_angle = { min = 90 max = 270 }
+			size = 4
+		}
+	}
+	planet = {
+		name = "Dek"
+		class = "pc_frozen"
+		orbit_distance = 55
+		orbit_angle = { min = 90 max = 270 }
+		size = 14
+		has_ring = yes
+		modifiers = none
+		change_orbit = 5
+	}
+	planet = {
+		name = "Sek"
+		class = "pc_frozen"
+		orbit_distance = 26
+		orbit_angle = { min = 90 max = 270 }
+		size = 9
+		has_ring = no
+		modifiers = none
+		moon = {
+			name = "Al-Sek"
+			class = "pc_asteroid"
+			orbit_distance = 10
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+		}
+	}
+
+}
+
+lakar_system_initializer = {
+	name = "Lakar"
+	class = "sc_k"
+	usage = custom_empire
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Lakar"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 36
+		has_ring = no
+	}
+
+	planet = {
+		name = "Ik"
+		class = "pc_gas_giant"
+		orbit_distance = 44
+		orbit_angle = { min = 90 max = 270 }
+		size = 27
+		change_orbit = 5
+		has_ring = no
+		moon = {
+			name = "Sal"
+			class = "pc_molten"
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = 17
+		}
+	}
+	planet = {
+		name = "Pol"
+		class = "pc_barren"
+		orbit_distance = 45
+		orbit_angle = { min = 90 max = 270 }
+		size = 12
+		has_ring = no
+	}
+	planet = {
+		name = "alvothari"
+		class = "pc_barycenter"
+		orbit_distance = 27
+		orbit_angle = { min = 90 max = 270 }
+		size = 1
+		has_ring = yes
+		moon = {
+			name = "Alvo"
+			class = "pc_ocean"
+			orbit_distance = 9
+			orbit_angle = { min = 90 max = 270 }
+			size = 17
+			starting_planet = yes
+			tile_blockers = none
+			modifiers = none
+			init_effect = {
+				prevent_anomaly = yes
+			}
+
+			init_effect = {
+				generate_start_buildings_and_blockers = yes
+			}
+		}
+		moon = {
+			name = "Thari"
+			class = ideal_planet_class
+			orbit_distance = 5
+			orbit_angle = 180
+			size = 12
+		}
+	}
+	planet = {
+		name = "Kaz"
+		class = "pc_toxic"
+		orbit_distance = 41
+		orbit_angle = { min = 90 max = 270 }
+		size = 23
+		has_ring = yes
+		change_orbit = 5
+	}
+	planet = {
+		name = "Tal"
+		class = "pc_frozen"
+		orbit_distance = 28
+		orbit_angle = { min = 90 max = 270 }
+		size = 8
+		has_ring = no
+	}
+
+}

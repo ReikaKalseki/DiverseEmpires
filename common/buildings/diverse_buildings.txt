@@ -1,0 +1,212 @@
+building_food_reactor_1 = {
+	tags = { food_reactor }
+
+	base_buildtime = @b2time
+	
+	cost = {
+		minerals = @b2cost
+	}
+	
+	produced_resources = {
+		energy = 8
+	}
+	
+	required_resources = {
+		food = 10
+	}
+	
+	upgrades = {
+		building_food_reactor_2
+	}	
+
+	prerequisites = {
+		#"tech_eco_simulation"
+	}
+	
+	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+	
+	potential = {
+		owner = { has_country_flag = dekron }
+		planet = {
+			NOT = { is_planet_class = pc_habitat }	
+		}
+	}
+
+	destroy_if = {
+		exists = owner
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+building_food_reactor_2 = {
+	tags = { food_reactor }
+
+	base_buildtime = @b3time
+	is_listed = no
+	
+	cost = {
+		minerals = @b3cost
+	}
+	
+	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+
+	potential = {
+		owner = { has_country_flag = dekron }
+		planet = {
+			NOT = { is_planet_class = pc_habitat }	
+		}
+	}	
+
+	destroy_if = {
+		exists = owner
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 16
+	}
+	
+	required_resources = {
+		food = 20
+	}
+	
+	upgrades = {
+		building_food_reactor_3
+	}	
+	
+	prerequisites = {
+		#"tech_hydroponics"
+	}
+}
+
+building_food_reactor_3 = {
+	tags = { food_reactor }
+
+	base_buildtime = @b4time
+	is_listed = no
+	
+	cost = {
+		minerals = @b4cost
+	}
+	
+	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+
+	potential = {
+		owner = { has_country_flag = dekron }
+		planet = {
+			NOT = { is_planet_class = pc_habitat }	
+		}
+	}	
+
+	destroy_if = {
+		exists = owner
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 24
+	}
+	
+	required_resources = {
+		food = 30
+	}
+	
+	upgrades = {
+		building_food_reactor_4
+	}	
+	
+	prerequisites = {
+		#"tech_gene_crops"
+	}
+}
+
+building_food_reactor_4 = {
+	tags = { food_reactor }
+
+	base_buildtime = @b5time
+	is_listed = no
+	
+	cost = {
+		minerals = @b5cost
+	}
+
+	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+
+	potential = {
+		owner = { has_country_flag = dekron }
+		planet = {
+			NOT = { is_planet_class = pc_habitat }	
+		}
+	}
+
+	destroy_if = {
+		exists = owner
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_2"
+			planet = {
+				OR = {
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+		energy = 32
+	}
+	
+	required_resources = {
+		food = 40
+	}	
+	
+	prerequisites = {
+		#"tech_nano_vitality_crops"
+	}	
+}

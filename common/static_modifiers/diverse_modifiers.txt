@@ -1,0 +1,4 @@
+genocidal_damage_boost = {
+	ship_weapon_damage = 0.5
+	#icon = "gfx/interface/icons/modifiers/aleran_expansion_3b.dds"
+}

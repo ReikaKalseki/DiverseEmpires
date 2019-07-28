@@ -1,0 +1,31 @@
+trait_split_machine = {
+	cost = 0
+	sorting_priority = 20
+	initial = no
+	randomized = no
+	modification = no
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/trait_split_machine.dds"
+	allowed_archetypes = { MACHINE }
+
+	forced_happiness = no #was yes
+	modifier = {
+		pop_environment_tolerance = 1.0
+	}
+}
+
+trait_hyperaggressive = {
+	cost = 1
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		army_defense_damage_mult = 0.4
+		army_attack_damage_mult = 0.3
+		ship_weapon_range_mult = 0.2
+		ship_fire_rate_mult = 0.1
+		leader_general_cost = -0.5
+		country_war_exhaustion_mult = -0.15
+		#country_claim_influence_cost_mult = -0.1
+		army_disengage_chance_mult = -0.35
+		ship_disengage_chance_mult = -0.35
+	}
+}

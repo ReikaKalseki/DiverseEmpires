@@ -1,0 +1,50 @@
+# Possible Tile Blocker Variables
+# spawn_chance, tile scope, value will compete with the spawn chance of every other item and there's a constant 100 for no blocker to spawn.
+# cost, resource table, the cost to clear this tile blocker
+# time, amount of days it takes to clear this tile blocker.
+# picture = tb_active_volcano #Use art from tb_active_volcano
+
+tb_unterraformed_land = {	
+	time = 90
+	cost = {
+		energy = 200
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+	
+	prerequisites = { "tech_terrestrial_sculpting" }
+}
+
+tb_predators = {
+	time = 120
+	cost = {
+		energy = 50
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+}
+
+tb_geothermal = {
+	time = 150
+	cost = {
+		energy = 300
+	}
+
+	spawn_chance = {
+		modifier = {
+			add = 0
+		}
+	}
+	
+	picture = tb_active_volcano
+	
+	prerequisites = { "tech_tb_volcano" }
+}

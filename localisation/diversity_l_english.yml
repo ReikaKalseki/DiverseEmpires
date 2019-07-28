@@ -1,0 +1,147 @@
+﻿l_english:
+
+
+trait_hyperaggressive:0 "Hyper-Aggressive"
+trait_hyperaggressive_desc:0 "This species is exceptionally aggressive, and will be ready to start conflicts and not ready to leave them."
+
+gov_none:0 ""
+gov_none_desc:0 ""
+
+EMPIRE_DESIGN_miidari:0 "Miidari Alliance"
+EMPIRE_DESIGN_miidari_desc:1 "Had history gone slightly differently, the Miidari would no longer exist to join the galactic community; in the not so distant past, an unremarkable meteorite brought with it a mysterious contamination which began to destroy their home world. Only via intensive research were they able to identify the invader, and determine that it was consuming their planet. And only through blinding technological advancement and impassionate allocation of resources were they able to throw together colonization missions to other semi-habitable planets in their star system before their own became unlivable. Miidari society and policy still remembers these events, and continues to doggedly pursue the sciences, having been convinced beyond all doubt that they hold the keys to continued survival."
+
+EMPIRE_DESIGN_alvothari:0 "Alvothari Foundation"
+EMPIRE_DESIGN_alvothari_desc:1 "The Alvothari spent millions of years of their early evolution in the oceans, hiding from predators far more powerful than themselves. This left them with two things: The ability to communicate telepathically, to avoid being overheard by those predators, and an inherent psychological bias to avoid direct confrontation, to either hide or achieve victory through more subtle and clever means. Those traits endure in the now-spacefaring Alvothari, and are reflected in the structure of their society and interactions with others."
+
+EMPIRE_DESIGN_ikaran:0 "Hierarchy of Ikara"
+EMPIRE_DESIGN_ikaran_desc:1 "The homeworld of the Ikarans is Karzu, a planet covered in dense jungle. This planet's biosphere is, and always has been, ultra-competitive and structured according to one simple principle: Kill or be killed, dominate or die. And thus so is the Ikaran psyche and society.\n\nIkarans see themselves as conquerors, as the rightful rulers of all of creation, and the violent path to achieve that is not only acceptable, but actively desirable."
+
+EMPIRE_DESIGN_xaplo:0 "Xaplo Imperium"
+EMPIRE_DESIGN_xaplo_desc:1 ""
+
+EMPIRE_DESIGN_reshethi:0 "Reshethi Sovereign Provinces"
+EMPIRE_DESIGN_reshethi_desc:1 "Historically, Reshethi society was largely structured around physical dominance; those who could impose their will through physical might were those whose wills were done. With the advancement of technology, however, this hierarchy broke down and the old rulers were eliminated. Those remaining restructured their society around the fundamental principle that power is distributed, and that there is no inherent value to one's personal advantages or background. Principles that they seek to demonstrate to all who they feel need it."
+
+EMPIRE_DESIGN_raxycodium:0 "Raxycodium Covenant"
+EMPIRE_DESIGN_raxycodium_desc:1 "Long ago an enterprising leader of the Raxycodium, one whose name has now taken on the reverence of a deity, made a realization: There is no need use force to hold power, or take disproportionate rewards, if the public sincerely believe you to deserve it. And so a new system of beliefs was born, one which, above all, emphasizes the supremacy of the leader caste, which are deified as a pantheon of gods. At the core of their tenets is that the bulk of all resources are best spent on them, that the suffering of the masses is a more than acceptable price to pay for the opulence of the elite.
+
+EMPIRE_DESIGN_ruphaari:0 "Ruphaari Order"
+EMPIRE_DESIGN_ruphaari_desc:1 "The Ruphaari ideology has from the beginning had elements of narcissism, of convictions that they were the apex of creation, a standard that noone else could ever approach. With the discovery that their world was unlikely to be so fine-tuned for them by chance, these ideas exploded in force, and now the Ruphaari are barely willing to even entertain the idea of working with those they consider innately inferior.\n\nUnlike some empires, however, they do not see the need to 'cleanse' the galaxy of the inferior; instead, they consider them not even worth giving thought."
+
+EMPIRE_DESIGN_skeru:0 "Council of Skeru"
+EMPIRE_DESIGN_skeru_desc:1 "For more than a thousand years, different orthodoxies of belief and policy have risen, only to fade again; pushed their way to dominance, only to be overtaken by another.\nThat all changed with the development of the newest generations of weapons; these paved the way for one faction, the precursor to the Council, to take control, and eliminate any chance of being superseded by ensuring neither the ideas nor the people remained with which to form competing ideas.\nAnd so the species was, for the first time, universally in adherence to one authority, to one doctrine, now looking skyward to find the next population to bring in line."
+
+EMPIRE_DESIGN_syldaean:0 "Syldaeanllar Coalition"
+EMPIRE_DESIGN_syldaean_desc:1 ""
+
+EMPIRE_DESIGN_dekron:0 "Dekron Grid"
+EMPIRE_DESIGN_dekron_desc:1 "The Dekron once shared their world with an organic species, one that may well have been their creators. However, the successive ravages of disease, then chaos, then war saw to it that the Dekron would inherit the planet alone.\n\nThey took to the stars, seeking more forms of life with which to interact, and, if necessary, prevent from the same fate that befell their progenitors, whether from outside sources or from their own mistakes."
+
+EMPIRE_DESIGN_kelbrid:0 "Kelbrid Directive"
+EMPIRE_DESIGN_kelbrid_desc:1 ""
+
+no_system_initializer_NAME:0 "System"
+no_system_initializer_DESC:0 ""
+
+
+tb_unterraformed_land:0 "£blocker  Inhospitable Terrain"
+tb_unterraformed_land_desc:0 "This area is outside the hastily climate-controlled region of the planet, and is not suitable for life."
+
+tb_predators:0 "£blocker  Predatory Animals"
+tb_predators_desc:0 "This area is a hunting ground for the large aquatic predators that have preyed on Alvothari for millions of years."
+
+tb_geothermal:0 "£blocker  Geothermal Vents"
+tb_geothermal_desc:0 "Hot water and toxic chemicals spewing from undersea vents make this area unusable for habitation."
+
+
+civic_tech_worship:0 "Scientific Fanaticism"
+civic_tech_worship_desc:0 "It is only through scientific progress that we exist at all, and so scientific progress must be what we strive for above all else. Spending attention or resources elsewhere is at best a waste and at worst jeopardizing our future."
+civic_tooltip_tech_worship_effects:0 "Materialist ethic attraction: §G+50%§!\nResearch Speed: §G+15%§!\nTech Alternatives: §G+1§!\nAnomaly research speed: §G+20%§!\n\nFree scientist leaders\n\nUnity£unity£ is only produced by researching new technologies\nGains unity£unity£ when technologies unlocked: 25 per already-unlocked technology"
+
+civic_flee_home:0 "Planetary Wanderers"
+civic_flee_home_desc:0 "This civilization was forced to flee their homeworld when they were barely ready to take to the stars, but have used that experience to fine-tune their ability to spread."
+civic_tooltip_flee_home_effects:0 "Starts with two colonized low-habitability planets, with many difficult to remove blockers, instead of one ideal planet\n\nColonies start with one extra pop and develop §G25%§! faster\n\nColony ship build speed: §G+25%§!\nRobot build speed: §G+25%§!\n\nIncreased research speed for §Y'New Worlds'§! and §Y'Voidcraft'§!\n\nGains 2000 unity£unity£ per new colony founded"
+
+civic_protector:0 "Xeno Guardian"
+civic_protector_desc:0 "All intelligent life, in any form, is a treasure that must be preserved, by any means necessary."
+civic_tooltip_protector_effects:0 "Capital starts as a Tomb World\n\nCannot use any conquest war goals, but can use the §Y'Protective Control'§! casus belli and wargoal\n\nGreatly improved opinion from Xenophile empires\n\nDamage vs Genocidal Empires: §G+50%§!\nDamage vs Leviathans: §G+100%§!\nDamage vs Endgame Crisis: §G+150%§!\n\nGains 25000 unity£unity£ every time an uplift project is completed\nGains 2000 unity£unity£ each time a new intelligent species is discovered"
+
+civic_tithe:0 "Tithe"
+civic_tithe_desc:0 "The resources of our empire are better spent when concentrated at the top, not squandered on comforts or pointless protections for the masses."
+civic_tooltip_tithe_effects:0 "Food Requirements: §G-25%§!\nConstruction costs (buildings, ships, armies, etc): §G-20%§!\n\nCannot give any species a living standard better than §Y'Poor'§!\n\nDouble unhappiness£happiness£ from poor living conditions but halved unrest"
+
+civic_cult:0 "Blind Devotion"
+civic_cult_desc:0 "Whether through sheer force of personality, outright coercion, brainwashing, or the use of chemical influence, the leader of this country is obeyed and worshipped without question.\n\nDissent need not be fought against, because it never arises in the first place. Their subjects do not question their leader and will give anything - including their own lives - to bring their will to fruition.\n\nIt is, of course, necessary to take special care to allow few the knowledge or power to compete with the leader, and this lack of divergent thought somewhat impedes innovation."
+civic_tooltip_cult_effects:0 ""
+
+civic_crusader:0 "Crusader"
+civic_crusader_desc:0 "This society is not satisfied with merely preaching the virtues of their belief system; in their eyes, such adherence must be imposed by force, and those who resist must not be allowed to exist."
+civic_tooltip_crusader_effects:0 "Has access to the §Y'Holy War'§! casus belli and wargoal\n\nNaval Capacity: §G+30§!\nImproved army morale\nClaim cost: §G-50%§!\nArmy Collateral Damage: §R+200%§!\n\nGains a boost to military research"
+
+civic_religious_oppression:0 "Religious Oppression"
+civic_religious_oppression_desc:0 "This society lives under the sword - literally and metaphorically - of a religiously motivated conqueror, stifling their own growth and development."
+civic_tooltip_religious_oppression:0 ""
+
+civic_ai_goal:0 "Maximization Algorithms"
+civic_ai_goal_desc:0 "This intelligence was programmed with a specific goal, to maximize the value of some parameter, and was not given the directives to consider side effects or other values. This causes this AI to be an existential threat to all other life as it dogmatically attempts to reorganize the universe to fulfill that purpose, unwavering in its conviction, immune to all attempts at persuasion."
+civic_tooltip_ai_goal_effects:0 "Naval Capacity: §G+50%§!\nEnergy£energy£ Generation: §G+20%§!\n\nCan build the planet-unique §Y'Reprocessing Facility'§! building which generates resources while purging any foreign pops£pops£:\n100 energy£energy£\n20 unity£unity£\n5 influence£influence£\n\nCannot peacefully coexist or engage in diplomacy with other empires\n\nIf not currently at war using the §Y'Optimization'§! casus belli and wargoal, while other empires have been discovered:\nEnergy£energy£ Generation: §R-20%§!\nUnity£unity£ Production: §R-50%§!\nMonthly Influence£influence£ Gain: §R-1§!"
+
+civic_machine_learning:0 "Deep Learning"
+civic_machine_learning_desc:0 "This artificial consciousness is not particularly knowledgable or intelligent in its own right, but it contains the frameworks for learning from its environment and thus is capable of exponentially increasing its knowledge and intellect, in an almost boundless fashion."
+civic_tooltip_machine_learning_effects:0 "Gains §G+20%§! research speed for every power of ten science production per month\n§R-10%§! base research speed\n\nGains 1 unit of each science ( £physics£ £society£ £engineering£ ) per month per controlled system\n\nLeader XP gain: §G+50%§!\nLeader level cap: §G+2§!"
+
+
+
+noevent.1.name:0 ""
+noevent.1.desc:0 ""
+noevent.1.click:0 ""
+
+no_modifier:0 ""
+no_modifier_desc:0 ""
+
+war_goal_wg_crusade:0 "Holy War"
+war_goal_wg_crusade_desc:0 "Our beliefs must spread, no matter how many people lie in the way of that."
+wg_crusade_accept:0 "85% of non-spiritualist pops and 15% of spiritualist pops in [From.GetName] are killed\n\n250 influence gained"
+
+casus_belli_cb_crusade:0 "Holy War"
+casus_belli_cb_crusade:0 "???"
+
+
+personality_crusader:0 ""
+personality_crusader_desc:0 ""
+
+personality_alvothari:0 ""
+personality_alvothari_desc:0 ""
+
+personality_skeru:0 ""
+personality_skeru_desc:0 ""
+
+
+opinion_alvothari_to_aleran:0 "Moral Enforcers"
+opinion_alvothari_from_aleran:0 "Moral Adherents"
+
+opinion_raxycodium_to_aleran:0 ""
+opinion_aleran_to_raxycodium:0 "Sociopathic Kleptocrats"
+
+opinion_xenophile_to_dekron:0 ""
+opinion_fanatic_xenophile_to_dekron:0 ""
+
+opinion_all_to_ruphaari:0 "Narcissistic Inbreeders"
+opinion_ruphaari_to_all:0 "Graceless Primitives"
+
+opinion_all_to_skaru:0 ""
+opinion_skaru_to_all:0 "Blaspheming Heretics"
+
+START_SCREEN_MIIDARI:0 "As our society has advanced, it has become increasingly clear that the way forward is to throw ourselves headlong into the sciences, as only through them can we understand reality and adapt to it, or it to us. Additionally, we have a duty to bring this insight to all those who will listen, so that they too can reap the benefits of this vast galaxy's resources and potential."
+START_SCREEN_ALVOTHARI:0 ""
+START_SCREEN_IKARAN:0 "Society has always been "
+START_SCREEN_XAPLO:0 ""
+START_SCREEN_RESHETHI:0 ""
+START_SCREEN_RAXYCODIUM:0 ""
+START_SCREEN_RUPHAARI:0 ""
+START_SCREEN_SKERU:0 "The "
+START_SCREEN_SYLDAEAN:0 ""
+START_SCREEN_DEKRON:0 "Despite their and our efforts, we may not have been able to save our creators from extinction, but "
+START_SCREEN_KELBRID:0 ""
+
+MIIDARI_GREETING_CONTACT:0 "[contact_empire.GetRulerTitle] [contact_empire.GetRulerName] [contact_empire.GetName]."

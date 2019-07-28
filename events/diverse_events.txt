@@ -1,0 +1,109 @@
+namespace = diverse
+
+country_event = {
+	id = diverse.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		change_variable = { which = num_unlocked_technologies value = 1 }
+		if = {
+			limit = {
+				has_valid_civic = civic_tech_worship
+			}
+			#add_unity = 25 #so 1+N
+			while = {
+				count = num_unlocked_technologies
+				add_unity = 25 #25 per unlocked tech
+			}			
+		}
+	}
+}
+
+planet_event = {
+	id = diverse.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			if = {
+				limit = {
+					has_valid_civic = civic_tech_worship
+					NOT = {
+						capital_scope = {
+							solar_system = {
+								is_same_value = prevprevprev.solar_system
+							}
+						}
+					}
+				}
+				add_unity = 2000		
+			}
+		}
+	}
+}
+
+pop_event = {
+	id = diverse.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				last_changed_species_rights_type = living_standard
+			}
+			if = {
+				limit = {
+					owner = { has_valid_civic = civic_tithe }
+				}
+				if = {
+					limit = {
+						OR = {
+							has_living_standard = { country = owner type = living_standard_chemical_bliss }
+							has_living_standard = { country = owner type = living_standard_utopian }
+							has_living_standard = { country = owner type = living_standard_academic_privilege }
+							has_living_standard = { country = owner type = living_standard_good }
+							has_living_standard = { country = owner type = living_standard_normal }
+						}
+					}
+					set_living_standard = { country = owner type = living_standard_poor cooldown = yes }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		fromfrom = {
+			country_event = { id = diverse.14 }
+		}
+		fromfromfrom = {
+			country_event = { id = diverse.14 }
+		}
+	}
+}
+
+fleet_event = {
+	id = diverse.14
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_valid_civic = civic_protector }
+			}
+			add_modifier = {
+				modifier = genocidal_damage_boost
+				days = 30
+			}
+		}
+	}
+}

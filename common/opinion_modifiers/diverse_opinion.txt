@@ -1,0 +1,102 @@
+opinion_dragon_alvothari_to = {
+	trigger = {
+		FROM = {
+			has_country_flag = aleran
+		}
+		this = {
+			has_country_flag = alvothari
+		}
+	}
+	opinion = {
+		base = 40
+	}
+}
+
+opinion_dragon_alvothari_from = {
+	trigger = {
+		this = {
+			has_country_flag = aleran
+		}
+		FROM = {
+			has_country_flag = alvothari
+		}
+	}
+	opinion = {
+		base = 40
+	}
+}
+
+opinion_xenophile_to_dekron = {
+	trigger = {
+		from = {
+			has_country_flag = dekron
+		}
+		this = {
+			has_ethic = ethic_xenophile
+		}
+	}
+	opinion = {
+		base = 30
+	}
+}
+
+opinion_fanatic_xenophile_to_dekron = {
+	trigger = {
+		from = {
+			has_country_flag = dekron
+		}
+		this = {
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+	opinion = {
+		base = 80
+	}
+}
+
+opinion_all_to_skeru = {
+	trigger = {
+		this = {
+			NOT = {has_country_flag = skeru}
+		}
+		from = {
+			has_country_flag = skeru
+		}
+	}
+	opinion = {
+		base = -300
+	}
+}
+
+opinion_skeru_to_all = {
+	trigger = {
+		from = {
+			NOT = {has_country_flag = skeru}
+		}
+		this = {
+			has_country_flag = skeru
+		}
+	}
+	opinion = {
+		base = -500
+	}
+}
+
+opinion_ruphaari_to_all = {
+	trigger = {
+		FROM = {
+			NOR = {
+				is_same_species = prev
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+		this = {
+			has_country_flag = ruphaari
+		}
+	}
+	opinion = {
+		base = -100
+	}
+}

@@ -1,0 +1,95 @@
+# Start Screen Messages
+# Parameters:
+#   trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#   localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+part = {
+	location = 0
+	localization = "START_SCREEN_MIIDARI"
+	
+	trigger = {
+		has_country_flag = miidari
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_ALVOTHARI"
+	
+	trigger = {
+		has_country_flag = alvothari
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_XAPLO"
+	
+	trigger = {
+		has_country_flag = xaplo
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_RESHETHI"
+	
+	trigger = {
+		has_country_flag = reshethi
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_RAXYCODIUM"
+	
+	trigger = {
+		has_country_flag = raxycodium
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_RUPHAARI"
+	
+	trigger = {
+		has_country_flag = ruphaari
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_SKERU"
+	
+	trigger = {
+		has_country_flag = skeru
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_SYLDAEAN"
+	
+	trigger = {
+		has_country_flag = syldaean
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_DEKRON"
+	
+	trigger = {
+		has_country_flag = dekron
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_KELBRID"
+	
+	trigger = {
+		has_country_flag = kelbrid
+	}
+}

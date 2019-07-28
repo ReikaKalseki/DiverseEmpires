@@ -1,0 +1,114 @@
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		
+	}
+}
+
+# A building construction has been queued.
+# This = Planet
+# From = Tile
+on_building_complete = {
+	events = {
+		
+	}
+}
+
+# From = Tile
+# This = Planet
+on_blocker_cleared = {
+	events = {
+		
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		diverse.13
+	}
+}
+
+# This = owner of fleet 1 (winner)
+# From = owner of fleet 2 (loser)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_space_battle_won = {
+	events = {
+		
+	}
+}
+
+# A ship has surveyed a planet.
+# Scope = Ship
+# From = Planet
+on_survey = {
+	events = {
+
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		diverse.11
+	}
+}
+
+# Scope = planet_event
+# This = planet scope
+# From = uplifted species (pre-modification)
+on_uplift_completion = {
+	events = {
+		
+	}
+}
+
+# Planet has been terraformed
+# This = Planet
+# From = Terraforming country
+on_terraforming_complete = {
+	events = {
+	
+	}
+}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+		
+	}
+}
+
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+	events = {
+		diverse.10
+	}
+}
+
+# We changed a species right
+# This = pop
+on_pop_rights_change = {
+	events = {
+		diverse.12
+	}
+}

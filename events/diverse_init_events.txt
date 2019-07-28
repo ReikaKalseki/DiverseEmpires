@@ -1,0 +1,367 @@
+namespace = diverse_init
+
+#100s: Basic init
+#200s: Planet init
+#300s: Government init
+#400s: System init
+#500s: Ships init
+#1000s: AI init
+
+### Empire init - add technologies and resources
+country_event = {
+	id = diverse_init.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				always = no
+			}
+		}
+	}
+}
+
+planet_event = { #change class and replace tile blockers for dekron
+	id = diverse_init.200
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_valid_civic = civic_protector }
+			}
+			change_pc = pc_nuked
+			change_planet_size = 2 # +2 tiles
+			every_tile = {
+				set_blocker = no
+			}
+			while = {
+				count = 4
+				random_tile = {
+					limit = {
+						has_pop = no
+						has_blocker = no
+					}
+					set_blocker = tb_radioactive_wasteland
+				}
+			}
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_pop = no
+						has_blocker = no
+					}
+					set_blocker = tb_city_ruins
+				}
+			}
+			while = {
+				count = 2
+				random_tile = {
+					limit = {
+						has_pop = no
+						has_blocker = no
+					}
+					set_blocker = tb_bomb_crater
+				}
+			}
+		}
+	}
+}
+
+planet_event = { #set up blockers for miidari
+	id = diverse_init.201
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_country_flag = miidari }
+			}
+			change_pc = pc_tundra
+			every_tile = {
+				limit = {has_pop = no}
+				set_blocker = tb_unterraformed_land
+			}
+			while = {
+				count = 3
+				random_tile = {
+					limit = {
+						has_blocker = yes
+					}
+					set_blocker = no
+				}
+			}
+		}
+	}
+}
+
+planet_event = {  #set up other planet init, like colonizing savo
+	id = diverse_init.202
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_country_flag = miidari }
+			}
+			owner = {
+				save_event_target_as = miidari_country
+				owner_species = {
+					save_event_target_as = miidari_species
+				}
+			}
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_planet_class = pc_arid
+					}
+					create_colony = {
+						owner = event_target:miidari_country
+						species = event_target:miidari_species
+						ethos = owner
+					}
+					set_planet_flag = colony_event #so it is treated as a homeworld
+					while = {
+						count = 2
+						random_tile = {
+							create_pop = {
+								species = event_target:miidari_species
+								ethos = owner
+							}
+						}
+					}
+					while = {
+						count = 6
+						random_tile = {
+							limit = {
+								has_pop = no
+							}
+							set_blocker = tb_unterraformed_land
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {  #prepare alvo
+	id = diverse_init.203
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_country_flag = alvothari }
+			}
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_planet_class = pc_ocean
+						is_colony = yes
+					}
+					random_tile = {
+						limit = {
+							has_blocker = yes
+						}
+						set_blocker = no
+					}
+					every_tile = {
+						limit = {
+							has_blocker = yes
+						}
+						set_blocker = tb_predators
+					}
+					while = {
+						count = 2
+						random_tile = {
+							limit = {
+								has_blocker = yes
+							}
+							set_blocker = tb_geothermal
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {  #prepare thari
+	id = diverse_init.204
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_country_flag = alvothari }
+			}
+			solar_system = {
+				random_system_planet = {
+					limit = {
+						is_planet_class = pc_ocean
+						is_colony = no
+					}
+					every_tile = {
+						limit = {
+							has_blocker = yes
+						}
+						set_blocker = no
+					}
+					while = {
+						count = 2
+						random_tile = {
+							limit = {
+								has_blocker = no
+							}
+							set_blocker = tb_geothermal
+						}
+					}
+					while = {
+						count = 3
+						random_tile = {
+							limit = {
+								has_blocker = no
+							}
+							set_blocker = tb_predators
+						}
+					}
+					while = {
+						count = 2
+						random_tile = {
+							limit = {
+								has_blocker = no
+							}
+							set_blocker = tb_toxic_kelp
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse_init.300
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				has_country_flag = alvothari
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_psionic
+			}
+			every_owned_leader = {
+				switch = {
+					trigger = leader_class
+					general = {add_trait = leader_trait_general_psionic}
+					admiral = {add_trait = leader_trait_admiral_psionic}
+					scientist = {add_trait = leader_trait_scientist_psionic}
+					governor = {add_trait = leader_trait_governor_psionic}
+					ruler = {add_trait = leader_trait_ruler_psionic}
+				}
+			}
+			every_pool_leader = {
+				switch = {
+					trigger = leader_class
+					general = {add_trait = leader_trait_general_psionic}
+					admiral = {add_trait = leader_trait_admiral_psionic}
+					scientist = {add_trait = leader_trait_scientist_psionic}
+					governor = {add_trait = leader_trait_governor_psionic}
+					ruler = {add_trait = leader_trait_ruler_psionic}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse_init.301
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				has_country_flag = dekron
+			}
+			modify_species = {
+				species = this
+				add_trait = trait_split_machine
+			}
+			every_owned_leader = {
+				#add_trait = trait_split_machine
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse_init.302
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				has_valid_civic = civic_tithe
+			}
+			every_owned_pop_species = {
+				set_living_standard = { country = prev type = living_standard_poor cooldown = yes }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse_init.400
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				always = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse_init.500
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				always = no
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse_init.1000
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = { 
+			limit = { 
+				always = no
+			}
+		}
+	}
+}

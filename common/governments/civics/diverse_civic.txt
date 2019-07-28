@@ -1,0 +1,277 @@
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 5 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_ship = yes / no				# default: no
+#	traits = { trait = ... }					# default: empty; trait set to enforce on the primary species. They cannot be removed, but more can be added if points/picks permit
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+civic_tech_worship = {
+	potential = {
+		ethics = {
+			value = ethic_fanatic_materialist
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_materialist
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		pop_ethic_materialist_attraction_mult = 0.5
+		all_technology_research_speed = 0.15
+		num_tech_alternatives_add = 2
+		leader_scientist_cost = -1
+		country_resource_unity_mult = -1
+	}
+
+	description = "civic_tooltip_tech_worship_effects"
+}
+
+civic_flee_home = {
+	potential = {
+		ethics = {
+			value = ethic_fanatic_materialist
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_materialist
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		category_new_worlds_research_speed_mult = 0.1
+		category_voidcraft_research_speed_mult = 0.1
+		planet_colony_development_speed_mult = 0.25
+		colony_start_num_pops_add = 1
+		shipsize_colonizer_build_speed_mult = 0.25
+		pop_robot_build_speed_mult = 0.25
+		ship_anomaly_research_speed_mult = 0.2
+	}
+
+	description = "civic_tooltip_flee_home_effects"
+}
+
+civic_cult = {
+	potential = {
+		ethics = {
+			value = ethic_fanatic_spiritualist
+			NOR = {
+				value = ethic_fanatic_egalitarian
+				value = ethic_egalitarian
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_spiritualist
+		}
+		#authority = { value = auth_dragon }
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		pop_government_ethic_attraction = 1
+		pop_ethics_shift_speed_mult = -0.75
+		planet_unrest_mult = -0.75
+		edict_cost = -0.75
+		#edict_length_mult = 0.5
+		country_trust_cap_add = -20
+		ruler_skill_levels = 1
+		country_resource_influence_add = 2
+		num_tech_alternatives_add = -1
+		all_technology_research_speed = -0.05
+		country_leader_cap = -2
+		diplomacy_influence_cost = 0.25
+		army_disengage_chance_mult = -0.5
+		ship_disengage_chance_mult = -0.5
+	}
+
+	#description = "civic_tooltip_cult_effects"
+}
+
+civic_crusader = {
+	potential = {
+		ethics = {
+			value = ethic_militarist
+			value = ethic_fanatic_spiritualist
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_militarist
+			value = ethic_fanatic_spiritualist
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		#country_war_exhaustion_mult = -0.75 #baked into custom wargoal
+		country_naval_cap_add = 30
+		category_military_theory_research_speed_mult = 0.2
+		army_attack_morale_mult = 1
+		army_morale_damage_mult = 0.5
+		country_claim_influence_cost_mult = -0.5
+		army_collateral_damage_mult = 2
+	}
+
+	description = "civic_tooltip_crusader_effects"
+}
+
+civic_religious_oppression = {
+	potential = {
+		ethics = {
+			value = ethic_militarist
+			value = ethic_fanatic_spiritualist
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_militarist
+			value = ethic_fanatic_spiritualist
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		pop_happiness = -0.4
+		pop_ethic_spiritualist_attraction_mult = 1.5
+		all_technology_research_speed = -0.2
+		pop_growth_speed = -0.1
+		influence_gain_mult = -0.25
+		country_resource_unity_mult = -0.25
+	}
+
+	#description = "civic_tooltip_religious_oppression"
+}
+
+civic_tithe = {
+	potential = {
+		ethics = {
+			OR = {
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+			NOR = {
+				value = ethic_fanatic_egalitarian
+				value = ethic_egalitarian
+			}
+		}
+		authority = { 
+			NOR = {
+				value = auth_dragon
+				value = auth_democratic
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+			NOR = {
+				value = ethic_fanatic_egalitarian
+				value = ethic_egalitarian
+			}
+		}
+		authority = { 
+			NOR = {
+				value = auth_dragon
+				value = auth_democratic
+			}
+		}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		pop_food_req_mult = -0.25
+		planet_building_cost_mult = -0.2
+		planet_clear_blocker_cost_mult = -0.2
+		country_ship_upgrade_cost_mult = -0.2
+		starbase_shipyard_build_cost_mult = -0.2
+		starbase_module_build_cost_mult = -0.2
+		pop_happiness = -0.2
+		country_unrest_unhappy_pop_effect_mult = -0.5
+	}
+
+	description = "civic_tooltip_tithe_effects"
+}
+
+civic_protector = {
+	potential = {
+		ethics = {
+			value = ethic_fanatic_xenophile
+		}
+	}
+	possible = {
+		ethics = {
+			value = ethic_fanatic_xenophile
+		}
+		#authority = { value = auth_dragon }
+	}
+	modification = no
+	random_weight = { base = 0 }
+	modifier = {	
+		damage_vs_country_type_swarm_mult = 1.5
+		damage_vs_country_type_extradimensional_mult = 1.5
+		damage_vs_country_type_extradimensional_2_mult = 1.5
+		damage_vs_country_type_extradimensional_3_mult = 1.5
+		damage_vs_country_type_ai_empire_mult = 1.5
+		
+		damage_vs_country_type_guardian_dragon = 1.0
+		damage_vs_country_type_guardian_stellarite = 1.0
+		damage_vs_country_type_guardian_wraith = 1.0
+		damage_vs_country_type_guardian_hiver = 1.0
+		damage_vs_country_type_guardian_horror = 1.0
+		damage_vs_country_type_guardian_fortress = 1.0
+		damage_vs_country_type_guardian_dreadnought = 1.0
+		damage_vs_country_type_guardian_sphere = 1.0
+		damage_vs_country_type_guardian_scavenger_bot = 1.0
+		damage_vs_country_type_guardian_elderly_tiyanki = 1.0
+		damage_vs_country_type_guardian_hatchling = 1.0
+	}
+
+	description = "civic_tooltip_protector_effects"
+}
+
+civic_ai_goal = {
+	potential = {
+		authority = {value = auth_machine_intelligence}
+	}
+	possible = {
+		authority = {value = auth_machine_intelligence}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		
+	}
+
+	description = "civic_tooltip_ai_goal_effects"
+}
+
+civic_machine_learning = {
+	potential = {
+		authority = {value = auth_machine_intelligence}
+	}
+	possible = {
+		authority = {value = auth_machine_intelligence}
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		species_leader_exp_gain = 0.5
+		leader_skill_levels = 2
+		
+	}
+
+	description = "civic_tooltip_machine_learning_effects"
+}

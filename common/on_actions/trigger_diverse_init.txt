@@ -1,0 +1,39 @@
+#Country events
+on_game_start_country = {
+	events = {
+		diverse_init.300
+		diverse_init.301
+		diverse_init.302
+	}
+}
+
+on_leader_spawned = {
+	events = {
+		
+	}
+}
+
+#Tech init
+empire_init_add_technologies = {
+	events = {
+		diverse_init.100
+	}
+}
+
+#Planet events
+empire_init_create_capital_pops = {
+	events = {
+		diverse_init.200
+		diverse_init.201
+		diverse_init.202
+		diverse_init.203
+		diverse_init.204
+	}
+}
+
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		#diverse_init.400
+	}
+}
