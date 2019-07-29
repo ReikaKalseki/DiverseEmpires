@@ -96,16 +96,19 @@ fleet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_ship = {
-			if = {
-				limit = {
-					owner = { has_valid_civic = civic_protector }
-					NOT = { has_modifier = genocidal_damage_boost }
+		if = {
+			limit = {
+				owner = { has_valid_civic = civic_protector }
+				NOT = {
+					any_owned_ship = {
+						has_modifier = genocidal_damage_boost
+					}
 				}
-				add_modifier = {
-					modifier = genocidal_damage_boost
-					days = 30
-				}
+			}
+			log = "Adding modifier to fleet [This.GetName]"
+			add_modifier = {
+				modifier = genocidal_damage_boost
+				days = 30
 			}
 		}
 	}
