@@ -148,7 +148,7 @@ civic_religious_oppression = {
 		pop_ethic_spiritualist_attraction_mult = 1.5
 		all_technology_research_speed = -0.2
 		pop_growth_speed = -0.1
-		influence_gain_mult = -0.25
+		country_resource_influence_mult = -0.25
 		country_resource_unity_mult = -0.25
 	}
 
@@ -228,17 +228,19 @@ civic_protector = {
 		damage_vs_country_type_extradimensional_3_mult = 1.5
 		damage_vs_country_type_ai_empire_mult = 1.5
 		
-		damage_vs_country_type_guardian_dragon = 1.0
-		damage_vs_country_type_guardian_stellarite = 1.0
-		damage_vs_country_type_guardian_wraith = 1.0
-		damage_vs_country_type_guardian_hiver = 1.0
-		damage_vs_country_type_guardian_horror = 1.0
-		damage_vs_country_type_guardian_fortress = 1.0
-		damage_vs_country_type_guardian_dreadnought = 1.0
-		damage_vs_country_type_guardian_sphere = 1.0
-		damage_vs_country_type_guardian_scavenger_bot = 1.0
-		damage_vs_country_type_guardian_elderly_tiyanki = 1.0
-		damage_vs_country_type_guardian_hatchling = 1.0
+		#damage_vs_country_type_guardian = 1.0
+		
+		damage_vs_country_type_guardian_dragon_mult = 1.0
+		damage_vs_country_type_guardian_stellarite_mult = 1.0
+		damage_vs_country_type_guardian_wraith_mult = 1.0
+		damage_vs_country_type_guardian_hiver_mult = 1.0
+		damage_vs_country_type_guardian_horror_mult = 1.0
+		damage_vs_country_type_guardian_fortress_mult = 1.0
+		damage_vs_country_type_guardian_dreadnought_mult = 1.0
+		damage_vs_country_type_guardian_sphere_mult = 1.0
+		damage_vs_country_type_guardian_scavenger_bot_mult = 1.0
+		damage_vs_country_type_guardian_elderly_tiyanki_mult = 1.0
+		damage_vs_country_type_guardian_hatchling_mult = 1.0
 	}
 
 	description = "civic_tooltip_protector_effects"

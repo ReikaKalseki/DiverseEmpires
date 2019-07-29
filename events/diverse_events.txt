@@ -82,10 +82,10 @@ country_event = {
 
 	immediate = {
 		fromfrom = {
-			country_event = { id = diverse.14 }
+			fleet_event = { id = diverse.14 }
 		}
 		fromfromfrom = {
-			country_event = { id = diverse.14 }
+			fleet_event = { id = diverse.14 }
 		}
 	}
 }
@@ -96,13 +96,16 @@ fleet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		if = {
-			limit = {
-				owner = { has_valid_civic = civic_protector }
-			}
-			add_modifier = {
-				modifier = genocidal_damage_boost
-				days = 30
+		every_owned_ship = {
+			if = {
+				limit = {
+					owner = { has_valid_civic = civic_protector }
+					NOT = { has_modifier = genocidal_damage_boost }
+				}
+				add_modifier = {
+					modifier = genocidal_damage_boost
+					days = 30
+				}
 			}
 		}
 	}
