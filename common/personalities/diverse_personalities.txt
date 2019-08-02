@@ -90,7 +90,7 @@ alvothari = {
 	}
 }
 
-skeru = { 
+ruphaari = { 
 	aggressiveness = 0.1
 	trade_willingness = 0.1
 	bravery = 1.0

@@ -1,7 +1,9 @@
 # No scope, like on_game_start
 on_monthly_pulse = {
 	events = {
-		
+		diverse.17
+		diverse.18
+		diverse.19
 	}
 }
 

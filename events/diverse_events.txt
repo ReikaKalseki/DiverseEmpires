@@ -105,11 +105,255 @@ fleet_event = {
 					}
 				}
 			}
-			log = "Adding modifier to fleet [This.GetName]"
+			#log = "Adding modifier to fleet [This.GetName]"
 			add_modifier = {
 				modifier = genocidal_damage_boost
 				days = 30
 			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse.15
+	#hide_window = yes
+	#is_triggered_only = yes
+	
+	title = "diverse.15.name"
+	desc = "diverse.15.desc"
+	picture = GFX_evt_sapient_AI
+	show_sound = event_default
+	
+	trigger = {
+		has_valid_civic = civic_ai_goal
+		NOT = { has_modifier = no_optimization_war }
+		NOT = {
+			any_war = {
+				using_war_goal = { type = wg_optimize owner = prev }
+			}
+		}
+		num_communications > 0
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = no_optimization_war
+			days = -1
+		}
+	}
+}
+
+country_event = {
+	id = diverse.16
+	#hide_window = yes
+	#is_triggered_only = yes
+	
+	title = "diverse.16.name"
+	desc = "diverse.16.desc"
+	picture = GFX_evt_sapient_AI
+	show_sound = event_default
+	
+	trigger = {
+		has_valid_civic = civic_ai_goal
+		has_modifier = no_optimization_war
+		any_war = {
+			using_war_goal = { type = wg_optimize owner = prev }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = {
+		remove_modifier = no_optimization_war
+	}
+}
+
+event = {
+	id = diverse.17
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { has_valid_civic = civic_machine_learning }
+			set_variable = { which = num_systems value = 0 }
+			every_system_within_border = {
+				change_variable = { which = num_systems value = 1 }
+			}
+			while = {
+				count = num_systems
+				add_physics_research = 1
+				add_society_research = 1
+				add_engineering_research = 1
+			}
+		}
+	}
+}
+
+event = {
+	id = diverse.18
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { has_valid_civic = civic_machine_learning }
+			if = {
+				limit = { has_monthly_income = { resource = physics_research value < 10 } }
+				remove_modifier = ai_t1_phys_boost
+				remove_modifier = ai_t2_phys_boost
+				remove_modifier = ai_t3_phys_boost
+				remove_modifier = ai_t4_phys_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = physics_research value >= 10 value < 100 } }
+				add_modifier = { modifier = ai_t1_phys_boost days = -1 }
+				remove_modifier = ai_t2_phys_boost
+				remove_modifier = ai_t3_phys_boost
+				remove_modifier = ai_t4_phys_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = physics_research value >= 100 value < 1000 } }
+				add_modifier = { modifier = ai_t2_phys_boost days = -1 }
+				remove_modifier = ai_t1_phys_boost
+				remove_modifier = ai_t3_phys_boost
+				remove_modifier = ai_t4_phys_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = physics_research value >= 1000 value < 10000 } }
+				add_modifier = { modifier = ai_t3_phys_boost days = -1 }
+				remove_modifier = ai_t1_phys_boost
+				remove_modifier = ai_t2_phys_boost
+				remove_modifier = ai_t4_phys_boost
+			}
+			else = { #clamp at 10k
+				add_modifier = { modifier = ai_t4_phys_boost days = -1 }
+				remove_modifier = ai_t1_phys_boost
+				remove_modifier = ai_t2_phys_boost
+				remove_modifier = ai_t3_phys_boost
+			}
+			
+			if = {
+				limit = { has_monthly_income = { resource = society_research value < 10 } }
+				remove_modifier = ai_t1_soc_boost
+				remove_modifier = ai_t2_soc_boost
+				remove_modifier = ai_t3_soc_boost
+				remove_modifier = ai_t4_soc_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = society_research value >= 10 value < 100 } }
+				add_modifier = { modifier = ai_t1_soc_boost days = -1 }
+				remove_modifier = ai_t2_soc_boost
+				remove_modifier = ai_t3_soc_boost
+				remove_modifier = ai_t4_soc_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = society_research value >= 100 value < 1000 } }
+				add_modifier = { modifier = ai_t2_soc_boost days = -1 }
+				remove_modifier = ai_t1_soc_boost
+				remove_modifier = ai_t3_soc_boost
+				remove_modifier = ai_t4_soc_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = society_research value >= 1000 value < 10000 } }
+				add_modifier = { modifier = ai_t3_soc_boost days = -1 }
+				remove_modifier = ai_t1_soc_boost
+				remove_modifier = ai_t2_soc_boost
+				remove_modifier = ai_t4_soc_boost
+			}
+			else = { #clamp at 10k
+				add_modifier = { modifier = ai_t4_soc_boost days = -1 }
+				remove_modifier = ai_t1_soc_boost
+				remove_modifier = ai_t2_soc_boost
+				remove_modifier = ai_t3_soc_boost
+			}
+			
+			if = {
+				limit = { has_monthly_income = { resource = engineering_research value < 10 } }
+				remove_modifier = ai_t1_eng_boost
+				remove_modifier = ai_t2_eng_boost
+				remove_modifier = ai_t3_eng_boost
+				remove_modifier = ai_t4_eng_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = engineering_research value >= 10 value < 100 } }
+				add_modifier = { modifier = ai_t1_eng_boost days = -1 }
+				remove_modifier = ai_t2_eng_boost
+				remove_modifier = ai_t3_eng_boost
+				remove_modifier = ai_t4_eng_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = engineering_research value >= 100 value < 1000 } }
+				add_modifier = { modifier = ai_t2_eng_boost days = -1 }
+				remove_modifier = ai_t1_eng_boost
+				remove_modifier = ai_t3_eng_boost
+				remove_modifier = ai_t4_eng_boost
+			}
+			else_if = {
+				limit = { has_monthly_income = { resource = engineering_research value >= 1000 value < 10000 } }
+				add_modifier = { modifier = ai_t3_eng_boost days = -1 }
+				remove_modifier = ai_t1_eng_boost
+				remove_modifier = ai_t2_eng_boost
+				remove_modifier = ai_t4_eng_boost
+			}
+			else = { #clamp at 10k
+				add_modifier = { modifier = ai_t4_eng_boost days = -1 }
+				remove_modifier = ai_t1_eng_boost
+				remove_modifier = ai_t2_eng_boost
+				remove_modifier = ai_t3_eng_boost
+			}
+		}
+	}
+}
+
+event = {
+	id = diverse.19
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_valid_civic = civic_cult
+				has_valid_civic = civic_crusader
+			}
+			every_owned_pop = {
+				limit = { member_of_faction = yes }
+				set_pop_faction = skeru_faction
+			}
+		}
+	}
+}
+
+country_event = {
+	id = diverse.20
+	hide_window = yes
+	
+	trigger = {
+		has_edict = internal_purge
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				NOR = {
+					pop_has_ethic = ethic_spiritualist
+					pop_has_ethic = ethic_militarist
+					member_of_faction = skeru_faction
+				}
+			}
+			kill_pop = yes
+			prev = { add_unity = 100 }
 		}
 	}
 }

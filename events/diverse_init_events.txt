@@ -79,7 +79,7 @@ planet_event = { #set up blockers for miidari
 	immediate = {
 		if = {
 			limit = {
-				owner = { has_country_flag = miidari }
+				owner = { has_valid_civic = civic_flee_home }
 			}
 			change_pc = pc_tundra
 			every_tile = {
@@ -107,7 +107,7 @@ planet_event = {  #set up other planet init, like colonizing savo
 	immediate = {
 		if = {
 			limit = {
-				owner = { has_country_flag = miidari }
+				owner = { has_valid_civic = civic_flee_home }
 			}
 			owner = {
 				save_event_target_as = miidari_country

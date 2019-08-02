@@ -76,7 +76,7 @@ civic_tooltip_cult_effects:0 ""
 
 civic_crusader:0 "Crusader"
 civic_crusader_desc:0 "This society is not satisfied with merely preaching the virtues of their belief system; in their eyes, such adherence must be imposed by force, and those who resist must not be allowed to exist."
-civic_tooltip_crusader_effects:0 "Has access to the §Y'Holy War'§! casus belli and wargoal\n\nNaval Capacity: §G+30§!\nImproved army morale\nClaim cost: §G-50%§!\nArmy Collateral Damage: §R+200%§!\n\nGains a boost to military research"
+civic_tooltip_crusader_effects:0 "Has access to the §Y'Holy War'§! casus belli and wargoal\nHas access to the §Y'Internal Purge'§! edict, which removes dissident pops over time and generates 100 unity£unity£ per pop killed\n\nNaval Capacity: §G+30§!\nImproved army morale\nClaim cost: §G-50%§!\nArmy Collateral Damage: §R+200%§!\n\nGains a boost to military research"
 
 civic_religious_oppression:0 "Religious Oppression"
 civic_religious_oppression_desc:0 "This society lives under the sword - literally and metaphorically - of a religiously motivated conqueror, stifling their own growth and development."
@@ -84,11 +84,11 @@ civic_tooltip_religious_oppression:0 ""
 
 civic_ai_goal:0 "Maximization Algorithms"
 civic_ai_goal_desc:0 "This intelligence was programmed with a specific goal, to maximize the value of some parameter, and was not given the directives to consider side effects or other values. This causes this AI to be an existential threat to all other life as it dogmatically attempts to reorganize the universe to fulfill that purpose, unwavering in its conviction, immune to all attempts at persuasion."
-civic_tooltip_ai_goal_effects:0 "Naval Capacity: §G+50%§!\nEnergy£energy£ Generation: §G+20%§!\n\nCan build the planet-unique §Y'Reprocessing Facility'§! building which generates resources while purging any foreign pops£pops£:\n100 energy£energy£\n20 unity£unity£\n5 influence£influence£\n\nCannot peacefully coexist or engage in diplomacy with other empires\n\nIf not currently at war using the §Y'Optimization'§! casus belli and wargoal, while other empires have been discovered:\nEnergy£energy£ Generation: §R-20%§!\nUnity£unity£ Production: §R-50%§!\nMonthly Influence£influence£ Gain: §R-1§!"
+civic_tooltip_ai_goal_effects:0 "Naval Capacity: §G+50%§!\nEnergy£energy£ Generation: §G+20%§!\n\nCan build the planet-unique §Y'Reprocessing Facility'§! building which generates resources while purging any foreign pops£pops£:\n100 energy£energy£\n20 unity£unity£\n2 influence£influence£\n\nCannot peacefully coexist or engage in diplomacy with other empires\n\nIf not currently at war using the §Y'Optimization'§! casus belli and wargoal, while other empires have been discovered:\nEnergy£energy£ Generation: §R-20%§!\nUnity£unity£ Production: §R-50%§!\nMonthly Influence£influence£ Gain: §R-2§!"
 
 civic_machine_learning:0 "Deep Learning"
 civic_machine_learning_desc:0 "This artificial consciousness is not particularly knowledgable or intelligent in its own right, but it contains the frameworks for learning from its environment and thus is capable of exponentially increasing its knowledge and intellect, in an almost boundless fashion."
-civic_tooltip_machine_learning_effects:0 "Gains §G+20%§! research speed for every power of ten science production per month\n§R-10%§! base research speed\n\nGains 1 unit of each science ( £physics£ £society£ £engineering£ ) per month per controlled system\n\nLeader XP gain: §G+50%§!\nLeader level cap: §G+2§!"
+civic_tooltip_machine_learning_effects:0 "Gains §G+10%§! research speed for every power of ten science production per month\n§R-15%§! base research speed\n\nGains 1 unit of each science ( £physics£ £society£ £engineering£ ) per month per controlled system\n\nLeader XP gain: §G+50%§!\nLeader level cap: §G+2§!"
 
 
 

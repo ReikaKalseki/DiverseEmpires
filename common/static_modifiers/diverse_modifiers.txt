@@ -2,3 +2,70 @@ genocidal_damage_boost = {
 	ship_weapon_damage = 0.5
 	#icon = "gfx/interface/icons/modifiers/aleran_expansion_3b.dds"
 }
+
+no_optimization_war = {
+	country_resource_energy_mult = -0.2
+	country_resource_unity_mult = -0.5
+	country_resource_influence_add = -2 #was 1
+	icon = "gfx/interface/icons/modifiers/no_optimization_war.dds"
+}
+
+ai_t1_phys_boost = {
+	country_physics_tech_research_speed = 0.1
+	icon = "gfx/interface/icons/modifiers/mod_country_physics_tech_research_speed.dds"
+}
+
+ai_t2_phys_boost = {
+	country_physics_tech_research_speed = 0.2
+	icon = "gfx/interface/icons/modifiers/mod_country_physics_tech_research_speed.dds"
+}
+
+ai_t3_phys_boost = {
+	country_physics_tech_research_speed = 0.3
+	icon = "gfx/interface/icons/modifiers/mod_country_physics_tech_research_speed.dds"
+}
+
+ai_t4_phys_boost = {
+	country_physics_tech_research_speed = 0.4
+	icon = "gfx/interface/icons/modifiers/mod_country_physics_tech_research_speed.dds"
+}
+
+ai_t1_soc_boost = {
+	country_society_tech_research_speed = 0.1
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+
+ai_t2_soc_boost = {
+	country_society_tech_research_speed = 0.2
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+
+ai_t3_soc_boost = {
+	country_society_tech_research_speed = 0.3
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+
+ai_t4_soc_boost = {
+	country_society_tech_research_speed = 0.4
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+
+ai_t1_eng_boost = {
+	country_engineering_tech_research_speed = 0.1
+	icon = "gfx/interface/icons/modifiers/mod_country_engineering_tech_research_speed.dds"
+}
+
+ai_t2_eng_boost = {
+	country_engineering_tech_research_speed = 0.2
+	icon = "gfx/interface/icons/modifiers/mod_country_engineering_tech_research_speed.dds"
+}
+
+ai_t3_eng_boost = {
+	country_engineering_tech_research_speed = 0.3
+	icon = "gfx/interface/icons/modifiers/mod_country_engineering_tech_research_speed.dds"
+}
+
+ai_t4_eng_boost = {
+	country_engineering_tech_research_speed = 0.4
+	icon = "gfx/interface/icons/modifiers/mod_country_engineering_tech_research_speed.dds"
+}

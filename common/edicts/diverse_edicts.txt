@@ -1,0 +1,25 @@
+country_edict = {
+	name = "internal_purge"
+	cost = { influence = 200 }
+	length = 360
+	
+	potential = {
+		has_valid_civic = civic_crusader
+	}
+	
+	allow = {
+			
+	}
+	
+	modifier = {
+		country_resource_unity_mult = 0.25
+	}
+	
+	effect = {
+		
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

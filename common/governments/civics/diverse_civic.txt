@@ -49,6 +49,7 @@ civic_flee_home = {
 			value = ethic_fanatic_materialist
 		}
 	}
+	modification = no
 	random_weight = { base = 0 }
 	modifier = {
 		category_new_worlds_research_speed_mult = 0.1
@@ -81,22 +82,23 @@ civic_cult = {
 		}
 		#authority = { value = auth_dragon }
 	}
+	modification = no
 	random_weight = { base = 0 }
 	modifier = {
-		pop_government_ethic_attraction = 1
+		pop_government_ethic_attraction = 4 #was +1
 		pop_ethics_shift_speed_mult = -0.75
 		planet_unrest_mult = -0.75
 		edict_cost = -0.75
 		#edict_length_mult = 0.5
 		country_trust_cap_add = -20
 		ruler_skill_levels = 1
-		country_resource_influence_add = 2
+		country_resource_influence_add = 4 #was 2
 		num_tech_alternatives_add = -1
 		all_technology_research_speed = -0.05
 		country_leader_cap = -2
 		diplomacy_influence_cost = 0.25
-		army_disengage_chance_mult = -0.5
-		ship_disengage_chance_mult = -0.5
+		army_disengage_chance_mult = -0.75 #both were -0.5
+		ship_disengage_chance_mult = -0.75
 	}
 
 	#description = "civic_tooltip_cult_effects"
@@ -253,9 +255,11 @@ civic_ai_goal = {
 	possible = {
 		authority = {value = auth_machine_intelligence}
 	}
+	modification = no
 	random_weight = { base = 0 }
 	modifier = {
-		
+		country_naval_cap_mult = 0.5
+		country_resource_energy_mult = 0.2
 	}
 
 	description = "civic_tooltip_ai_goal_effects"
@@ -268,11 +272,12 @@ civic_machine_learning = {
 	possible = {
 		authority = {value = auth_machine_intelligence}
 	}
+	modification = no
 	random_weight = { base = 0 }
 	modifier = {
 		species_leader_exp_gain = 0.5
 		leader_skill_levels = 2
-		
+		all_technology_research_speed = -0.15
 	}
 
 	description = "civic_tooltip_machine_learning_effects"

@@ -23,10 +23,10 @@ building_food_reactor_1 = {
 		#"tech_eco_simulation"
 	}
 	
-	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+	show_tech_unlock_if = { owner = { has_valid_civic = civic_protector } }
 	
 	potential = {
-		owner = { has_country_flag = dekron }
+		owner = { has_valid_civic = civic_protector }
 		planet = {
 			NOT = { is_planet_class = pc_habitat }	
 		}
@@ -65,10 +65,10 @@ building_food_reactor_2 = {
 		minerals = @b3cost
 	}
 	
-	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+	show_tech_unlock_if = { owner = { has_valid_civic = civic_protector } }
 
 	potential = {
-		owner = { has_country_flag = dekron }
+		owner = { has_valid_civic = civic_protector }
 		planet = {
 			NOT = { is_planet_class = pc_habitat }	
 		}
@@ -119,10 +119,10 @@ building_food_reactor_3 = {
 		minerals = @b4cost
 	}
 	
-	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+	show_tech_unlock_if = { owner = { has_valid_civic = civic_protector } }
 
 	potential = {
-		owner = { has_country_flag = dekron }
+		owner = { has_valid_civic = civic_protector }
 		planet = {
 			NOT = { is_planet_class = pc_habitat }	
 		}
@@ -172,10 +172,10 @@ building_food_reactor_4 = {
 		minerals = @b5cost
 	}
 
-	show_tech_unlock_if = { owner = { has_country_flag = dekron } }
+	show_tech_unlock_if = { owner = { has_valid_civic = civic_protector } }
 
 	potential = {
-		owner = { has_country_flag = dekron }
+		owner = { has_valid_civic = civic_protector }
 		planet = {
 			NOT = { is_planet_class = pc_habitat }	
 		}
@@ -209,4 +209,89 @@ building_food_reactor_4 = {
 	prerequisites = {
 		#"tech_nano_vitality_crops"
 	}	
+}
+
+building_reprocessing_facility = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+		minerals = 200
+	}
+	
+	potential = {
+		owner = { has_valid_civic = civic_ai_goal }
+		planet = {
+			NOT = { is_planet_class = pc_habitat }	
+		}
+	}
+
+	destroy_if = {
+		exists = owner
+		owner = { NOT = { has_valid_civic = civic_ai_goal } }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			text = "requires_building_capital_1"
+			planet = {
+				OR = {
+					has_building = "building_capital_1"
+					has_building = "building_capital_2"
+					has_building = "building_capital_3"
+				}
+			}
+		}
+	}
+	
+	produced_resources = {
+
+	}
+	
+	produced_resource_trigger = {
+		modifier = {
+			is_at_war = yes
+			#any_country = {
+			#	is_at_war_with = prev
+			#	biological?
+			#}
+			any_war = {
+				using_war_goal = { type = wg_optimize owner = prev }
+			}
+			resources = {
+				energy = 100
+				unity = 20
+				influence = 2 #was 5
+			}
+		}
+	}
+	
+	required_resources = {
+		
+	}
+	
+	planet_modifier = {
+		
+	}
+	
+	prerequisites = {
+		
+	}
+	
+	ai_allow = {
+		NOR = {
+			has_resource = {
+				type = sr_betharian
+				amount > 0
+			}	
+			has_resource = {
+				type = sr_alien_pets
+				amount > 0
+			}				
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
 }
